@@ -1,0 +1,62 @@
+.ldesc {
+  color: #fff;
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 14px;
+  margin-bottom: 68px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  margin-bottom: 81px;
+}
+
+.projects-section {
+  position: relative;
+}
+
+.dotpattern {
+  position: absolute;
+  top: 25%;
+  left: -15%;
+}
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 155px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray, #abb2bf);
+  border-right: none;
+  right: -10%;
+  top: 12.5%;
+}
+
+.square2 {
+  position: absolute;
+  width: 50px;
+  height: 155px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray, #abb2bf);
+  border-left: none;
+  left: -10%;
+  top: 65%;
+}
+
+.dotpattern2 {
+  position: absolute;
+  top: 70%;
+  right: -15%;
+}
+
+.dotpattern3 {
+  position: absolute;
+  top: 90%;
+  left: -15%;
+}/*# sourceMappingURL=project.css.map */

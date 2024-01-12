@@ -1,0 +1,466 @@
+/* 
+.tipa-box {
+    width: 91px;
+    height: 91px;
+    border: 1px solid #ABB2BF;
+    -left: 200px;
+} */
+.intro-section {
+  margin-top: 136px;
+}
+
+.intro > div {
+  width: 50%;
+  float: left;
+}
+
+.title {
+  color: #fff;
+  font-family: Fira Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.title span {
+  color: #c778dd;
+}
+
+.desc {
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.personImg {
+  display: flex;
+  width: 457px;
+  height: 386px;
+  position: relative;
+  z-index: 1;
+}
+
+.person {
+  width: 457px;
+  flex-shrink: 0;
+}
+
+.dot {
+  display: flex;
+  width: 84px;
+  height: 84px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-top: 114px;
+  margin-left: 300px;
+}
+
+.icon {
+  width: 155px;
+  height: 155px;
+  flex-shrink: 0;
+}
+
+.main-box {
+  border: 1px solid #abb2bf;
+  display: inline-flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.main-box p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Fira Code;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.mini-box {
+  padding: 16px;
+  position: absolute;
+  right: 22.5%;
+  bottom: -65px;
+  border: 1px solid #abb2bf;
+}
+.mini-box p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Fira Code;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-section {
+  margin-top: 200px;
+}
+
+.first-line {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+.first-line p {
+  color: #fff;
+  font-family: Fira Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 511px;
+  background: #c778dd;
+  margin: 20px 210px 0 16px;
+}
+
+.view-all {
+  color: #fff;
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.cards {
+  display: flex;
+}
+
+.custom-card {
+  border: 1px solid var(--gray, #abb2bf);
+}
+
+.custom-card-header p {
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-bottom: 1px solid var(--gray, #abb2bf);
+  margin-bottom: 0;
+}
+
+.custom-card-body {
+  padding: 16px;
+}
+.custom-card-body h1 {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+.custom-card-body p {
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.live {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.cashed {
+  border: 1px solid var(--gray, #abb2bf) !important;
+  color: var(--gray, #abb2bf) !important;
+  margin-left: 16px;
+}
+
+.project-section {
+  position: relative;
+}
+.project-section .project-title {
+  display: flex;
+  justify-content: space-between;
+}
+.project-section .project-title .title-main {
+  display: flex;
+}
+.project-section .project-title .text {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.project-section .project-title .view-all {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+.project-section .cards {
+  display: flex;
+  justify-content: space-around;
+}
+.project-section .dotpattern {
+  position: absolute;
+  left: -13%;
+}
+.project-section .square {
+  position: absolute;
+  width: 50px;
+  height: 155px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray, #abb2bf);
+  border-right: none;
+  right: -8.6%;
+  top: 50%;
+}
+
+.skill-section {
+  margin-top: 106px;
+}
+.skill-section .skill-title {
+  display: flex;
+}
+.skill-section .skill-title .text {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.skill-section .main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skill-section .main .patterns {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.skill-section .main .patterns img {
+  margin: 0;
+  padding: 0;
+}
+.skill-section .main .patterns .img1 {
+  position: absolute;
+  top: 10%;
+  left: -100%;
+}
+.skill-section .main .patterns .img2 {
+  position: absolute;
+  top: 0;
+  right: -100%;
+}
+.skill-section .main .patterns .img3 {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+.skill-section .main .patterns .img44 {
+  margin-top: 150%;
+  margin-left: -100%;
+}
+.skill-section .main .patterns .img5 {
+  position: absolute;
+  right: -125%;
+  bottom: 20%;
+}
+.skill-section .main .main-side {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skill-section .main .main-side .box {
+  width: 178px;
+  padding: 8px 8px;
+  border: 1px solid var(--gray, #abb2bf);
+}
+.skill-section .main .main-side .box .title {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+}
+.skill-section .main .main-side .box .line {
+  margin: -8px;
+  padding: 0;
+  width: 177px;
+  height: 0px;
+  border: 1px solid var(--gray, #abb2bf);
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  background: #abb2bf;
+}
+.skill-section .main .main-side .box .desc {
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.about-me-section {
+  margin-top: 112px;
+}
+.about-me-section .title {
+  display: flex;
+}
+.about-me-section .main {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me-section .main .text {
+  position: relative;
+}
+.about-me-section .main .text .half-square {
+  position: absolute;
+  width: 100px;
+  height: 155px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray, #abb2bf);
+  border-left: none;
+  left: -40%;
+  top: 30%;
+}
+.about-me-section .main .text .desc {
+  width: 515px;
+}
+.about-me-section .main .text .desc .part-2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about-me-section .main .pattern {
+  position: relative;
+}
+.about-me-section .main .pattern .img-1 {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 0;
+  right: 300%;
+}
+.about-me-section .main .pattern .img-2 {
+  width: 104px;
+  height: 56px;
+  position: absolute;
+  top: 48%;
+  right: 125%;
+}
+.about-me-section .main .pattern .img-3 {
+  width: 103px;
+  height: 103px;
+  margin-top: 225%;
+  margin-left: 125%;
+}
+
+.contact-section {
+  margin-top: 113px;
+  position: relative;
+}
+.contact-section .contact-title {
+  display: flex;
+}
+.contact-section .contact-title .text {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.contact-section .contact-title img {
+  position: absolute;
+  left: -40%;
+  top: 30%;
+  width: 103px;
+  height: 103px;
+}
+.contact-section .pattern {
+  position: relative;
+}
+.contact-section .pattern .dotImg {
+  position: absolute;
+  left: -15%;
+  margin-top: 3.5%;
+}
+.contact-section .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-section .main .desc {
+  width: 505px;
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.contact-section .main .box {
+  border: 1px solid var(--gray, #abb2bf);
+  padding: 16px;
+  gap: 16px;
+  width: 204px;
+}
+.contact-section .main .box .box-title {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contact-section .main .box .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section .main .box .item .desc {
+  font-size: 13.5px;
+  margin: 0 0 0 2px;
+}/*# sourceMappingURL=app.css.map */

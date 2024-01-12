@@ -1,0 +1,135 @@
+.about-me-section {
+  position: relative;
+}
+.about-me-section .title {
+  margin-top: 53px;
+  margin-bottom: 14px;
+}
+.about-me-section .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.about-me-section .first .mid-dot {
+  position: absolute;
+  top: 25%;
+  left: -15%;
+}
+.about-me-section .first .text .desc {
+  width: 515px;
+}
+.about-me-section .first .text .desc .part-2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about-me-section .first .pattern {
+  position: relative;
+  margin-top: -100px;
+}
+.about-me-section .first .pattern .img-1 {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 0;
+  right: 300%;
+}
+.about-me-section .first .pattern .img-2 {
+  width: 104px;
+  height: 56px;
+  position: absolute;
+  top: 48%;
+  right: 125%;
+}
+.about-me-section .first .pattern .img-3 {
+  width: 103px;
+  height: 103px;
+  margin-top: 225%;
+  margin-left: 125%;
+}
+.about-me-section .first .pattern .pinkPat {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  flex-shrink: 0;
+  right: -150%;
+  top: -20%;
+}
+.about-me-section .boxes {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.about-me-section .boxes .box {
+  width: 200px;
+  padding: 8px 8px;
+  border: 1px solid var(--gray, #abb2bf);
+}
+.about-me-section .boxes .box .title {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  margin-top: 0;
+}
+.about-me-section .boxes .box .line {
+  margin: -8px;
+  padding: 0;
+  width: 199px;
+  height: 0px;
+  border: 1px solid var(--gray, #abb2bf);
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  background: #abb2bf;
+}
+.about-me-section .boxes .box .desc {
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.about-me-section .boxes .box .l {
+  color: #fff;
+}
+.about-me-section .funfact {
+  display: flex;
+  align-items: center;
+}
+.about-me-section .funfact .text .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.about-me-section .funfact .text .boxes .box {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about-me-section .funfact .text .boxes .box .desc {
+  margin: 0;
+}
+.about-me-section .funfact .pattern {
+  position: relative;
+  margin-left: 250px;
+}
+.about-me-section .funfact .pattern .SkillDotPat {
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+}
+.about-me-section .funfact .pattern .SkillpinkPat {
+  position: absolute;
+  width: 133px;
+  height: 133px;
+}/*# sourceMappingURL=about.css.map */

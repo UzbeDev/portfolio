@@ -1,0 +1,150 @@
+.about-me-section {
+  position: relative;
+  .title {
+    margin-top: 53px;
+    margin-bottom: 14px;
+  }
+  .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .mid-dot {
+      position: absolute;
+      top: 25%;
+      left: -15%;
+    }
+    .text {
+      .desc {
+        width: 515px;
+        .part-2 {
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+    .pattern {
+      position: relative;
+      margin-top: -100px;
+      .img-1 {
+        width: 84px;
+        height: 84px;
+        position: absolute;
+        top: 0;
+        right: 300%;
+      }
+      .img-2 {
+        width: 104px;
+        height: 56px;
+        position: absolute;
+        top: 48%;
+        right: 125%;
+      }
+      .img-3 {
+        width: 103px;
+        height: 103px;
+        margin-top: 225%;
+        margin-left: 125%;
+      }
+      .pinkPat {
+        position: absolute;
+        width: 155px;
+        height: 155px;
+        flex-shrink: 0;
+        right: -150%; //-8.6
+        top: -20%;
+      }
+    }
+  }
+  // .dotPatImage {
+  //   position: absolute;
+  //   bottom: 20%;
+  //   right: -20%;
+  //   width: 103px;
+  //   height: 103px;
+  // }
+  .boxes {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    .box {
+      // gap: 8px;
+      width: 200px; //178px
+      padding: 8px 8px;
+      border: 1px solid var(--gray, #abb2bf);
+
+      .title {
+        color: var(--white, #fff);
+        font-family: Fira Code;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        margin-top: 0;
+      }
+
+      .line {
+        margin: -8px;
+        padding: 0;
+        width: 199px; //177
+        height: 0px;
+        border: 1px solid var(--gray, #abb2bf);
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        background: #abb2bf;
+      }
+
+      .desc {
+        color: var(--gray, #abb2bf);
+        font-family: Fira Code;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 20px;
+        margin-bottom: 8px;
+      }
+      .l {
+        color: #fff;
+      }
+    }
+  }
+  .funfact {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    .text {
+      .boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1em;
+        column-gap: 20px;
+        .box {
+          display: block;
+          width: fit-content;
+          .desc {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .pattern {
+      position: relative;
+      margin-left: 250px;
+      .SkillDotPat {
+        position: absolute;
+        right: 20%;
+        bottom: 10%;
+      }
+      .SkillpinkPat {
+        position: absolute;
+        width: 133px;
+        height: 133px;
+
+      }
+    }
+  }
+}

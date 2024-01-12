@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+*::selection {
+  background: #c778dd;
+  color: #fff;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #c778dd #282c33;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #282c33;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c778dd;
+  border-radius: 0px;
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+body {
+  background: #282c33;
+  cursor: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.btn-button {
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 8px 16px;
+  border: 1px solid #c778dd;
+  background: #282c33;
+}
+
+.btn-button:active {
+  background: rgba(199, 120, 221, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.panjara {
+  color: #c778dd;
+}
+.cards {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 1em;
+}

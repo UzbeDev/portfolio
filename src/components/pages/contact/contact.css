@@ -1,0 +1,31 @@
+.contact-section .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-section .first .desc {
+  width: 505px;
+}
+.contact-section .first .box {
+  padding: 16px;
+  border: 1px solid var(--gray, #abb2bf);
+}
+.contact-section .first .box .desc {
+  display: contents;
+  color: var(--white, #fff);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.contact-section .first .box .d {
+  color: var(--gray, #abb2bf);
+}
+.contact-section .first .box .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}/*# sourceMappingURL=contact.css.map */
