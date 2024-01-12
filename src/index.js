@@ -11,6 +11,7 @@ import Nav from "./components/pages/nav/Nav";
 import "./index.css";
 import AnimatedCursor from "react-animated-cursor";
 import Footer from "./components/pages/footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Aos from "aos";
 (function (d) {
   "use strict";
@@ -52,6 +53,7 @@ root.render(
         border: "3px solid #c778dd",
       }}
     />
+    <SpeedInsights/>
   </div>
 );
 

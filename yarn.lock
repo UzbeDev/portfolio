@@ -2477,6 +2477,11 @@
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
 
+"@vercel/speed-insights@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.0.3.tgz#ae7175e2b9fd37f815519ff555d0eac4c7a0dfad"
+  integrity sha512-bKIt0HDdF6hP2bJZyS+za3k6sKeAXNRLSIUbwVwvyvKdsHBWS6ILBvmD1wXHZZyTqjU1TP7dTE/F6lHM6rBdKA==
+
 "@vuepress/shared-utils@^1.2.0":
   version "1.9.10"
   resolved "https://registry.yarnpkg.com/@vuepress/shared-utils/-/shared-utils-1.9.10.tgz#45aae7fcf07a2067fb340c71e5bd96837b48dfee"
