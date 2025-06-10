@@ -26,6 +26,7 @@
 .about-me-section .first .pattern {
   position: relative;
   margin-top: -100px;
+  margin-right: 15%;
 }
 .about-me-section .first .pattern .img-1 {
   width: 84px;

@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/pages/intro/App";
 import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Project from "./components/pages/project/Project";
 import About from "./components/pages/about/About";
@@ -11,7 +10,6 @@ import Nav from "./components/pages/nav/Nav";
 import "./index.css";
 import AnimatedCursor from "react-animated-cursor";
 import Footer from "./components/pages/footer/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Aos from "aos";
 (function (d) {
   "use strict";
@@ -21,22 +19,24 @@ import Aos from "aos";
       e.preventDefault();
     },
     false
-    );
-  })(document);
+  );
+})(document);
 
 Aos.init();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div className="container">
+  <div>
     <BrowserRouter>
       <Nav />
+        <div className="container">
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/projects" element={<Project />} />
-        <Route path="/about-me" element={<About />} />
-        <Route path="/contacts" element={<Contact />} />
+          <Route path="/" element={<App />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/about-me" element={<About />} />
+          <Route path="/contacts" element={<Contact />} />
       </Routes>
-      <Footer/>
+        </div>
+      <Footer />
     </BrowserRouter>
     <div id="cursor">
       <div id="cursor-outer"></div>
@@ -53,7 +53,6 @@ root.render(
         border: "3px solid #c778dd",
       }}
     />
-    <SpeedInsights/>
   </div>
 );
 

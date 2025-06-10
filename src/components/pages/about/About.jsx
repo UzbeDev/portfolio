@@ -22,11 +22,11 @@ export default function About() {
         />
         <div className="text" data-aos="zoom-in-down" data-aos-duration="2000">
           <div className="desc">
-            <p className="part-1">Hello, i’m Elias!</p>
+            <p className="part-1">Hello, i’m Akbar!</p>
             <div className="part-2">
-              I’m a self-taught front-end developer based in Kyiv, Ukraine. I
-              can develop responsive websites from scratch and raise them into
-              modern user-friendly web experiences.
+                I’m a nearly self-taught full-stack developer based in Karshi, Uzbekistan. I
+                can develop responsive websites from scratch and raise them into
+                modern user-friendly web experiences.
             </div>
             <div className="part-2">
               Transforming my creativity and knowledge into a websites has been
@@ -96,7 +96,7 @@ export default function About() {
           <div className="box" data-aos="zoom-in-down" data-aos-duration="2000">
             <p className="title">Frameworks</p>
             <div className="line"></div>
-            <p className="desc">React Django Spring-Boot</p>
+            <p className="desc">React Django Aiogram</p>
           </div>
         </div>
       </div>

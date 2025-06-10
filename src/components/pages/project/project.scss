@@ -15,6 +15,14 @@
   align-items: center;
   margin-top: 48px;
   margin-bottom: 81px;
+  .card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    a{
+      text-decoration: none;
+    }
+  }
 }
 .projects-section {
   position: relative;

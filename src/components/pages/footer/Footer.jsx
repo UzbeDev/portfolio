@@ -5,7 +5,7 @@ import github from "./../../../img/icons/Github.svg";
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <footer>
+    <footer className="container" >
       <div className="footer-line"></div>
       <div className="main">
         <div className="text">

@@ -9,6 +9,12 @@
   margin-top: 136px;
 }
 
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -90px;
+}
 .intro > div {
   width: 50%;
   float: left;
@@ -46,7 +52,6 @@
 }
 
 .person {
-  width: 457px;
   flex-shrink: 0;
 }
 
@@ -59,23 +64,27 @@
   align-items: flex-start;
   flex-shrink: 0;
   margin-top: 114px;
-  margin-left: 300px;
+  margin-left: -20px;
 }
 
 .icon {
   width: 155px;
   height: 155px;
   flex-shrink: 0;
+  margin-left: 80px;
 }
 
-.main-box {
-  border: 1px solid #abb2bf;
-  display: inline-flex;
-  padding: 32px;
-  align-items: flex-start;
-  gap: 10px;
+.text-box {
+  display: flex;
+  position: relative;
+  left: 43%;
 }
-.main-box p {
+.text-box .main-box {
+  position: relative;
+  border: 1px solid #abb2bf;
+  padding: 32px;
+}
+.text-box .main-box p {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -85,15 +94,14 @@
   font-weight: 500;
   line-height: normal;
 }
-
-.mini-box {
-  padding: 16px;
+.text-box .mini-box {
   position: absolute;
-  right: 22.5%;
-  bottom: -65px;
+  padding: 16px;
+  top: 100%;
+  right: 45.9%;
   border: 1px solid #abb2bf;
 }
-.mini-box p {
+.text-box .mini-box p {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -102,13 +110,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.text-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .project-section {
@@ -155,7 +156,31 @@
 .custom-card {
   border: 1px solid var(--gray, #abb2bf);
 }
+.custom-card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+.custom-card .card-footer p {
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
+.custom-card-header {
+  margin: 0;
+  padding: 0;
+}
+.custom-card-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .custom-card-header p {
   color: var(--gray, #abb2bf);
   font-family: Fira Code;
@@ -195,7 +220,8 @@
 
 .live {
   margin-left: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
+  text-decoration: none;
 }
 
 .cashed {
@@ -322,7 +348,7 @@
   display: flex;
 }
 .skill-section .main .main-side .box .line {
-  margin: -8px;
+  margin: 8px -8px -8px -8px;
   padding: 0;
   width: 177px;
   height: 0px;
@@ -375,6 +401,7 @@
 }
 .about-me-section .main .pattern {
   position: relative;
+  margin-right: 15%;
 }
 .about-me-section .main .pattern .img-1 {
   width: 84px;

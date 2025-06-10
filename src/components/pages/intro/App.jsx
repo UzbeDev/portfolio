@@ -1,13 +1,15 @@
 import iconForPerson from "./../../../img/logo.png";
 import dots from "./../../../img/Dots.svg";
-import project1 from "./../../../img/project1.png";
+import project1 from "./../../../img/project1.jpg";
+import project2 from "./../../../img/project2.jpg";
+import project3 from "./../../../img/project3.jpg";
 import square from "./../../../img/square.svg";
 import outlinepatsvg from "./../../../img/outlinepatsvg.svg";
 import "./app.css";
 import middleDots from "./../../../img/middledots.svg";
 import telegram from "./../../../img/icons/Telegram.svg";
 import email from "./../../../img/icons/Email.svg";
-
+import person from "./../../../img/person.png";
 function App() {
   return (
     <>
@@ -15,7 +17,7 @@ function App() {
         <div className="intro">
           <div className="welcome">
             <p className="title" data-aos="zoom-in" data-aos-duration="1000">
-              Uzbedev is <span>full-stack</span> developer
+              uzbedev is <span>full-stack</span> developer
             </p>
             <p className="desc" data-aos="zoom-in" data-aos-duration="1000">
               He crafts responsive websites where <br /> technologies meet
@@ -33,13 +35,19 @@ function App() {
             </a>
           </div>
           <div className="personImg">
-            {/* <img className='person' src={person} alt="Person" /> */}
             <img
               className="icon"
               src={iconForPerson}
               alt="icon"
               data-aos="fade-up-right"
               data-aos-duration="1000"
+            />
+            <img
+              data-aos="zoom-out-up"
+              data-aos-duration="1000"
+              className="person"
+              src={person}
+              alt="Person"
             />
             <img
               className="dot"
@@ -55,7 +63,7 @@ function App() {
           <div className="main-box">
             <p
               data-aos="fade-right"
-              data-aos-offset="300"
+              data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
             >
               With great power comes great electricity bill
@@ -64,14 +72,12 @@ function App() {
           <div className="mini-box">
             <p
               data-aos="fade-left"
-              data-aos-offset="300"
+              data-aos-duration="1000"
               data-aos-easing="ease-in-sine"
             >
               - Dr. Who
             </p>
           </div>
-          <div className="tipa-box"></div>
-          <div className="clearfix"></div>
         </div>
       </section>
       <section className="project-section">
@@ -113,13 +119,13 @@ function App() {
               <p>HTML CSS REACT</p>
             </div>
             <div className="custom-card-body">
-              <h1>ChertNodes</h1>
+              <h1>Finsweet</h1>
               <p>Importand project</p>
             </div>
             <div className="card-footer">
-              <button type="button" className="btn-button live">
+               <a target="_blank" rel="noreferrer"  href="https://uzbedev.github.io/finsweet" type="button" className="btn-button live">
                 {"Live <~>"}
-              </button>
+              </a>
             </div>
           </div>
           <div
@@ -128,17 +134,17 @@ function App() {
             className="custom-card"
           >
             <div className="custom-card-header">
-              <img src={project1} alt="project img" width={423} />
-              <p>HTML CSS REACT</p>
+              <img src={project2} alt="project img" width={423} />
+              <p>HTML SCSS REACT</p>
             </div>
             <div className="custom-card-body">
-              <h1>ChertNodes</h1>
+              <h1>Pro Auto</h1>
               <p>Importand project</p>
             </div>
             <div className="card-footer">
-              <button type="button" className="btn-button live">
+              <a  target="_blank" rel="noreferrer" href="https://uzbedev.github.io/proauto" type="button" className="btn-button live">
                 {"Live <~>"}
-              </button>
+              </a>
             </div>
           </div>
           <div
@@ -147,17 +153,17 @@ function App() {
             className="custom-card"
           >
             <div className="custom-card-header">
-              <img src={project1} alt="project img" width={423} />
+              <img src={project3} alt="project img" width={423} />
               <p>HTML CSS REACT</p>
             </div>
             <div className="custom-card-body">
-              <h1>ChertNodes</h1>
+              <h1>Trip Goal</h1>
               <p>Importand project</p>
             </div>
             <div className="card-footer">
-              <button type="button" className="btn-button live">
+               <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/tripgoal" type="button" className="btn-button live">
                 {"Live <~>"}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -235,7 +241,7 @@ function App() {
             <div className="box" data-aos="zoom-in" data-aos-duration="2000">
               <p className="title">Frameworks</p>
               <div className="line"></div>
-              <p className="desc">React Spring-Boot</p>
+              <p className="desc">React Django Aiogram</p>
             </div>
 
             <div className="box" data-aos="fade-right" data-aos-duration="2000">
@@ -266,9 +272,9 @@ function App() {
               data-aos="zoom-in-down"
               data-aos-duration="2000"
             >
-              <p className="part-1">Hello, i’m Elias!</p>
+              <p className="part-1">Hello, i’m Akbar!</p>
               <div className="part-2">
-                I’m a self-taught front-end developer based in Kyiv, Ukraine. I
+                I’m a nearly self-taught full-stack developer based in Karshi, Uzbekistan. I
                 can develop responsive websites from scratch and raise them into
                 modern user-friendly web experiences.
               </div>

@@ -16,7 +16,12 @@ $font-family_1: Fira Code;
 }
 
 .intro {
-  > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -90px;
+
+  >div {
     width: 50%;
     float: left;
   }
@@ -55,7 +60,7 @@ $font-family_1: Fira Code;
 }
 
 .person {
-  width: 457px;
+  // width: 457px;
   flex-shrink: 0;
 }
 
@@ -68,58 +73,61 @@ $font-family_1: Fira Code;
   align-items: flex-start;
   flex-shrink: 0;
   margin-top: 114px;
-  margin-left: 300px;
+  margin-left: -20px;
 }
 
 .icon {
   width: 155px;
   height: 155px;
   flex-shrink: 0;
-}
-
-.main-box {
-  border: 1px solid #abb2bf;
-  display: inline-flex;
-  padding: 32px;
-  align-items: flex-start;
-  gap: 10px;
-
-  p {
-    margin: 0;
-    padding: 0;
-    color: $color_1;
-    font-family: $font-family_1;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-}
-
-.mini-box {
-  padding: 16px;
-  position: absolute;
-  right: 22.5%;
-  bottom: -65px;
-  border: 1px solid #abb2bf;
-
-  p {
-    margin: 0;
-    padding: 0;
-    color: $color_1;
-    font-family: $font-family_1;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+  margin-left: 80px;
 }
 
 .text-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  left: 43%;
+
+  .main-box {
+    position: relative;
+    border: 1px solid #abb2bf;
+    padding: 32px;
+
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: $color_1;
+      font-family: $font-family_1;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .mini-box {
+    position: absolute;
+    padding: 16px;
+    top: 100%;
+    right: 45.9%;
+    ;
+    // right: 22.5%;
+    // bottom: -65px;
+    border: 1px solid #abb2bf;
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: $color_1;
+      font-family: $font-family_1;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
 }
 
 .project-section {
@@ -166,9 +174,34 @@ $font-family_1: Fira Code;
 
 .custom-card {
   border: 1px solid var(--gray, #abb2bf);
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+
+    p {
+      color: $color_3;
+      font-family: $font-family_1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
 }
 
 .custom-card-header {
+  margin: 0;
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   p {
     color: $color_3;
     font-family: $font-family_1;
@@ -211,7 +244,10 @@ $font-family_1: Fira Code;
 
 .live {
   margin-left: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
+
+  text-decoration: none;
+
 }
 
 .cashed {
@@ -226,9 +262,11 @@ $font-family_1: Fira Code;
   .project-title {
     display: flex;
     justify-content: space-between;
-    .title-main{
+
+    .title-main {
       display: flex;
     }
+
     .text {
       color: var(--white, #fff);
       font-family: Fira Code;
@@ -297,9 +335,11 @@ $font-family_1: Fira Code;
         margin: 0;
         padding: 0;
       }
+
       position: relative;
       margin: 0;
       padding: 0;
+
       .img1 {
         position: absolute;
         top: 10%;
@@ -317,10 +357,12 @@ $font-family_1: Fira Code;
         right: 0;
         top: 40%;
       }
+
       .img44 {
         margin-top: 150%;
         margin-left: -100%;
       }
+
       .img5 {
         position: absolute;
         right: -125%;
@@ -334,13 +376,12 @@ $font-family_1: Fira Code;
       align-items: center;
 
       .box {
-        // gap: 8px;
-        width: 178px;
+      width: 178px;
         padding: 8px 8px;
         border: 1px solid var(--gray, #abb2bf);
 
         .title {
-          color: var(--white, #fff);
+           color: var(--white, #fff);
           font-family: Fira Code;
           font-size: 16px;
           font-style: normal;
@@ -348,9 +389,9 @@ $font-family_1: Fira Code;
           line-height: normal;
           display: flex;
         }
-
+        
         .line {
-          margin: -8px;
+          margin:8px -8px -8px -8px;
           padding: 0;
           width: 177px;
           height: 0px;
@@ -362,7 +403,7 @@ $font-family_1: Fira Code;
         }
 
         .desc {
-          color: var(--gray, #abb2bf);
+            color: var(--gray, #abb2bf);
           font-family: Fira Code;
           font-size: 16px;
           font-style: normal;
@@ -375,17 +416,22 @@ $font-family_1: Fira Code;
     }
   }
 }
+
 .about-me-section {
   margin-top: 112px;
+
   .title {
     display: flex;
   }
+
   .main {
     display: flex;
     justify-content: space-between;
+
     // align-items: center;
     .text {
       position: relative;
+
       .half-square {
         position: absolute;
         width: 100px;
@@ -396,16 +442,20 @@ $font-family_1: Fira Code;
         left: -40%;
         top: 30%;
       }
+
       .desc {
         width: 515px;
+
         .part-2 {
           margin-top: 40px;
           margin-bottom: 40px;
         }
       }
     }
+
     .pattern {
       position: relative;
+      margin-right: 15%;
       .img-1 {
         width: 84px;
         height: 84px;
@@ -414,6 +464,7 @@ $font-family_1: Fira Code;
         top: 0;
         right: 300%;
       }
+
       .img-2 {
         width: 104px;
         height: 56px;
@@ -421,6 +472,7 @@ $font-family_1: Fira Code;
         top: 48%;
         right: 125%;
       }
+
       .img-3 {
         width: 103px;
         height: 103px;
@@ -430,11 +482,14 @@ $font-family_1: Fira Code;
     }
   }
 }
+
 .contact-section {
   margin-top: 113px;
   position: relative;
+
   .contact-title {
     display: flex;
+
     .text {
       color: var(--white, #fff);
       font-family: Fira Code;
@@ -443,6 +498,7 @@ $font-family_1: Fira Code;
       font-weight: 500;
       line-height: normal;
     }
+
     img {
       position: absolute;
       left: -40%;
@@ -451,18 +507,22 @@ $font-family_1: Fira Code;
       height: 103px;
     }
   }
-  .pattern{
+
+  .pattern {
     position: relative;
-    .dotImg{
+
+    .dotImg {
       position: absolute;
       left: -15%;
       margin-top: 3.5%;
     }
   }
+
   .main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .desc {
       width: 505px;
       color: var(--gray, #abb2bf);
@@ -472,11 +532,13 @@ $font-family_1: Fira Code;
       font-weight: 500;
       line-height: normal;
     }
+
     .box {
       border: 1px solid var(--gray, #abb2bf);
       padding: 16px;
       gap: 16px;
       width: 204px;
+
       // height: 141px;
       .box-title {
         color: var(--white, #fff);
@@ -486,10 +548,12 @@ $font-family_1: Fira Code;
         font-weight: 600;
         line-height: normal;
       }
+
       .item {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .desc {
           font-size: 13.5px;
           margin: 0 0 0 2px;

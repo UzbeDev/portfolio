@@ -1,6 +1,8 @@
 import React from "react";
 import "./project.css";
-import project1 from "./../../../img/project1.png";
+import project1 from "./../../../img/project1.jpg";
+import project2 from "./../../../img/project2.jpg";
+import project3 from "./../../../img/project3.jpg";
 import dots from "./../../../img/Dots.svg";
 import square from "./../../../img/square.svg";
 import outlinepatsvg from "./../../../img/outlinepatsvg.svg";
@@ -30,20 +32,20 @@ export default function Project() {
           className="custom-card"
         >
           <div className="custom-card-header">
-            <img src={project1} alt="project img" width={423} />
+            <img src={project1} alt="project img" />
             <p>HTML CSS REACT</p>
           </div>
           <div className="custom-card-body">
-            <h1>ChertNodes</h1>
+            <h1>Finsweet</h1>
             <p>Importand project</p>
           </div>
           <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-            <button type="button" className="btn-button cashed">
-              {"Cached >="}
-            </button>
+            <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/finsweet" type="button" className="btn-button live">
+                {"Live <~>"}
+              </a>
+             <a target="_blank"   rel="noreferrer" href="https://github.com/UzbeDev/finsweet" type="button" className="btn-button cashed">
+              {"Source >="}
+            </a>
           </div>
         </div>
         <div
@@ -52,20 +54,20 @@ export default function Project() {
           className="custom-card"
         >
           <div className="custom-card-header">
-            <img src={project1} alt="project img" width={423} />
+            <img src={project2} alt="project img" />
             <p>HTML CSS REACT</p>
           </div>
           <div className="custom-card-body">
-            <h1>ChertNodes</h1>
+            <h1>Pro Auto</h1>
             <p>Importand project</p>
           </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-            <button type="button" className="btn-button cashed">
-              {"Cached >="}
-            </button>
+          <div className="card-footer"> 
+            <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/proauto" type="button" className="btn-button live">
+                {"Live <~>"}
+              </a>
+              <a target="_blank"   rel="noreferrer" href="https://github.com/UzbeDev/proauto" type="button" className="btn-button cashed">
+              {"Source >="}
+            </a>
           </div>
         </div>
         <div
@@ -74,88 +76,23 @@ export default function Project() {
           className="custom-card"
         >
           <div className="custom-card-header">
-            <img src={project1} alt="project img" width={423} />
+            <img src={project3} alt="project img" />
             <p>HTML CSS REACT</p>
           </div>
           <div className="custom-card-body">
-            <h1>ChertNodes</h1>
+            <h1>Trip Goal</h1>
             <p>Importand project</p>
           </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-            <button type="button" className="btn-button cashed">
-              {"Cached >="}
-            </button>
+          <div className="card-footer"> 
+            <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/tripgoal" type="button" className="btn-button live">
+                {"Live <~>"}
+              </a>
+             <a target="_blank"   rel="noreferrer" href="https://github.com/UzbeDev/tripgoal" type="button" className="btn-button cashed">
+              {"Source >="}
+            </a>
           </div>
         </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <img src={project1} alt="project img" width={423} />
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>ChertNodes</h1>
-            <p>Importand project</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-            <button type="button" className="btn-button cashed">
-              {"Cached >="}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <img src={project1} alt="project img" width={423} />
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>ChertNodes</h1>
-            <p>Importand project</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-            <button type="button" className="btn-button cashed">
-              {"Cached >="}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <img src={project1} alt="project img" width={423} />
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>ChertNodes</h1>
-            <p>Importand project</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-            <button type="button" className="btn-button cashed">
-              {"Cached >="}
-            </button>
-          </div>
-        </div>
+        
       </div>
       <div
         className="square"
@@ -187,31 +124,13 @@ export default function Project() {
             <p>HTML CSS REACT</p>
           </div>
           <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
+            <h1>LasesVPN</h1>
+            <p>Front-end of single paged VPN website with no mobile version.</p>
           </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
+          <div className="card-footer"> 
+            <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/lasesVPN" type="button" className="btn-button live">
+                {"Live <~>"}
+              </a>
           </div>
         </div>
         <div
@@ -223,121 +142,13 @@ export default function Project() {
             <p>HTML CSS REACT</p>
           </div>
           <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
+            <h1>TransitFlow</h1>
+            <p>Front-end of logistic company with no other pages and no mobile version.</p>
           </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          className="custom-card"
-        >
-          <div className="custom-card-header">
-            <p>HTML CSS REACT</p>
-          </div>
-          <div className="custom-card-body">
-            <h1>My blog</h1>
-            <p>Front-end of my future blog website written in vue</p>
-          </div>
-          <div className="card-footer">
-            <button type="button" className="btn-button live">
-              {"Live <~>"}
-            </button>
+          <div className="card-footer"> 
+            <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/transitflow" type="button" className="btn-button live">
+                {"Live <~>"}
+              </a>
           </div>
         </div>
         

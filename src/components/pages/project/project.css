@@ -16,6 +16,14 @@
   margin-top: 48px;
   margin-bottom: 81px;
 }
+.cards .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .card-footer a {
+  text-decoration: none;
+}
 
 .projects-section {
   position: relative;
