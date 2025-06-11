@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import iconForPerson from "./../../../img/logo.png";
 import dots from "./../../../img/Dots.svg";
 import project1 from "./../../../img/project1.jpg";
@@ -10,7 +11,35 @@ import middleDots from "./../../../img/middledots.svg";
 import telegram from "./../../../img/icons/Telegram.svg";
 import email from "./../../../img/icons/Email.svg";
 import person from "./../../../img/person.png";
+import emailjs from "emailjs-com";
+import Contact from "../contact/Contact";
 function App() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_obz3xsp",
+        "template_w1avvt9",
+        formData,
+        "PqvKiHfjCkjA6Ntjm"
+      )
+      .then(() => alert("Message sent successfully!"))
+      .catch((error) => console.error("Failed to send message:", error));
+  };
+
+
+  
   return (
     <>
       <section className="intro-section">
@@ -23,7 +52,7 @@ function App() {
               He crafts responsive websites where <br /> technologies meet
               creativity
             </p>
-            <a href="https://t.me/Network_Person">
+            <a href="/contacts">
               <button
                 type="button"
                 className="btn-button"
@@ -123,7 +152,13 @@ function App() {
               <p>Importand project</p>
             </div>
             <div className="card-footer">
-               <a target="_blank" rel="noreferrer"  href="https://uzbedev.github.io/finsweet" type="button" className="btn-button live">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://uzbedev.github.io/finsweet"
+                type="button"
+                className="btn-button live"
+              >
                 {"Live <~>"}
               </a>
             </div>
@@ -142,7 +177,13 @@ function App() {
               <p>Importand project</p>
             </div>
             <div className="card-footer">
-              <a  target="_blank" rel="noreferrer" href="https://uzbedev.github.io/proauto" type="button" className="btn-button live">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://uzbedev.github.io/proauto"
+                type="button"
+                className="btn-button live"
+              >
                 {"Live <~>"}
               </a>
             </div>
@@ -161,7 +202,13 @@ function App() {
               <p>Importand project</p>
             </div>
             <div className="card-footer">
-               <a target="_blank"   rel="noreferrer" href="https://uzbedev.github.io/tripgoal" type="button" className="btn-button live">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://uzbedev.github.io/tripgoal"
+                type="button"
+                className="btn-button live"
+              >
                 {"Live <~>"}
               </a>
             </div>
@@ -274,9 +321,9 @@ function App() {
             >
               <p className="part-1">Hello, i’m Akbar!</p>
               <div className="part-2">
-                I’m a nearly self-taught full-stack developer based in Karshi, Uzbekistan. I
-                can develop responsive websites from scratch and raise them into
-                modern user-friendly web experiences.
+                I’m a nearly self-taught full-stack developer based in Karshi,
+                Uzbekistan. I can develop responsive websites from scratch and
+                raise them into modern user-friendly web experiences.
               </div>
               <div className="part-2">
                 Transforming my creativity and knowledge into a websites has
@@ -316,7 +363,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="contact-section">
+      {/* <section className="contact-section">
         <div
           className="contact-title"
           data-aos="fade-right"
@@ -340,6 +387,9 @@ function App() {
           <p className="desc">
             I’m interested in freelance opportunities. However, if you have
             other request or question, don’t hesitate to contact me
+            <p className="ldesc" data-aos="fade-left" data-aos-duration="2000">
+              You can message me here:
+            </p>
           </p>
           <div className="box" data-aos="fade-left" data-aos-duration="3000">
             <p className="box-title">Message me here</p>
@@ -353,7 +403,54 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+        <form
+          onSubmit={handleSubmit}
+          className="contact-form"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <label
+            className="form-label"
+            htmlFor="name"
+            style={{ marginTop: "0px" }}
+          >
+            Name:
+          </label>
+          <input
+            className="form-input"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            onChange={handleChange}
+            required
+          />
+          <label className="form-label" htmlFor="email">
+            Email:
+          </label>
+          <input
+            className="form-input"
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            onChange={handleChange}
+            required
+          />
+          <label className="form-label" htmlFor="message">
+            Message:
+          </label>
+          <textarea
+            className="form-input"
+            name="message"
+            placeholder="Your Message"
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button type="submit" className="btn-button">
+            Send Message
+          </button>
+        </form>
+      </section> */}
+      <Contact />
     </>
   );
 }

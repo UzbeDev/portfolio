@@ -1,14 +1,26 @@
 .contact-section {
+  .ldesc {
+    margin-bottom: 0px;
+  }
+
+  .desc {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
   .first {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .desc {
       width: 505px;
     }
+
     .box {
       padding: 16px;
       border: 1px solid var(--gray, #abb2bf);
+
       .desc {
         display: contents;
         color: var(--white, #fff);
@@ -17,12 +29,13 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        margin-top: 16px;
         margin-bottom: 16px;
       }
+
       .d {
         color: var(--gray, #abb2bf);
-          }
+      }
+
       .item {
         display: flex;
         justify-content: flex-start;
@@ -30,4 +43,81 @@
       }
     }
   }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    // border: #abb2bf 1px solid;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    // background-color: var(--dark, #1e1e1e);
+    // border-radius: 8px;
+    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+
+    .btn-button {
+      margin-top: 50px;
+
+      &:active {
+        background: rgba(199, 120, 221, 0.2);
+        transition: all 0.2s ease-in-out;
+      }
+
+    }
+
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      // border-radius: 4px;
+      border: 1px solid var(--gray, #abb2bf);
+      background-color: var(--dark, #282c33);
+      color: #c778dd;
+      font-family: Fira Code;
+      border-radius: 0;
+      ;
+      outline: none;
+
+      &:focus {
+        border-color: var(--purple, #c678dd);
+      }
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--gray, #abb2bf);
+      font-family: Fira Code;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      margin-top: 20px;
+    }
+  }
+}
+
+input,
+textarea {
+  position: relative;
+  padding-right: 30px; // Space for the icon
+  background-image: url("./../../../img/logo.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  &:invalid {
+    background-image: url("./../../../img/logo.png"); // Change if needed
+  }
+
+}
+
+.contact-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }

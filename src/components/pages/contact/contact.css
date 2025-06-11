@@ -1,3 +1,10 @@
+.contact-section .ldesc {
+  margin-bottom: 0px;
+}
+.contact-section .desc {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
 .contact-section .first {
   display: flex;
   justify-content: space-between;
@@ -18,7 +25,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-top: 16px;
   margin-bottom: 16px;
 }
 .contact-section .first .box .d {
@@ -28,4 +34,64 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.contact-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.contact-section .contact-form .btn-button {
+  margin-top: 50px;
+}
+.contact-section .contact-form .btn-button:active {
+  background: rgba(199, 120, 221, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.contact-section .contact-form .form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--gray, #abb2bf);
+  background-color: var(--dark, #282c33);
+  color: #c778dd;
+  font-family: Fira Code;
+  border-radius: 0;
+  outline: none;
+}
+.contact-section .contact-form .form-input:focus {
+  border-color: var(--purple, #c678dd);
+}
+.contact-section .contact-form .form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--gray, #abb2bf);
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  position: relative;
+  padding-right: 30px;
+  background-image: url("./../../../img/logo.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+input:invalid,
+textarea:invalid {
+  background-image: url("./../../../img/logo.png");
+}
+
+.contact-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }/*# sourceMappingURL=contact.css.map */

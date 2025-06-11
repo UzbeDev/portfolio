@@ -11,6 +11,7 @@ import "./index.css";
 import AnimatedCursor from "react-animated-cursor";
 import Footer from "./components/pages/footer/Footer";
 import Aos from "aos";
+import Loading from "./components/Loading";
 (function (d) {
   "use strict";
   d.addEventListener(
@@ -27,6 +28,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
     <BrowserRouter>
+      <Loading />
       <Nav />
         <div className="container">
       <Routes>
