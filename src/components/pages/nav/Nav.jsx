@@ -1,9 +1,8 @@
-import React from "react";
 // import logo from "./../../../img/Style=Default.svg";
 import logo from "./../../../img/uzbedev-logo.png";
 import "./nav.css";
-import { Link } from "react-router-dom";
 import toggle from "./../../../img/icons/toggle.svg";
+import { NavLink } from "react-router-dom";
 export default function Nav() {
   function openNav() {
     document.getElementById("myNav").style.width = "100%";
@@ -15,64 +14,94 @@ export default function Nav() {
   return (
     <>
       <div id="myNav" className="overlay">
-        <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
+        <NavLink
+          activeClassName="active"
+          to="#"
+          className="closebtn"
+          onClick={closeNav}
+        >
           &times;
-        </a>
+        </NavLink>
         <div className="overlay-content">
           <li className="link-item">
-            <a href="/">
+            <NavLink activeClassName="active" to="/" onClick={closeNav}>
               <span className="panjara">#</span>
-              <span style={{ color: "#fff" }}>home</span>
-            </a>
+              <span className="nav-title">home</span>
+            </NavLink>
           </li>
           <li className="link-item">
-            <a href="/projects">
-              <span className="panjara">#</span>projects
-            </a>
+            <NavLink activeClassName="active" to="/projects" onClick={closeNav}>
+              <span className="panjara">#</span>
+              <span className="nav-title">projects</span>
+            </NavLink>
           </li>
           <li className="link-item">
-            <a href="/about-me">
-              <span className="panjara">#</span>about-me
-            </a>
+            <NavLink activeClassName="active" to="/about-me" onClick={closeNav}>
+              <span className="panjara">#</span>
+              <span className="nav-title">about-me</span>
+            </NavLink>
           </li>
           <li className="link-item">
-            <a href="/contacts">
-              <span className="panjara">#</span>contacts
-            </a>
+            <NavLink activeClassName="active" to="/contacts" onClick={closeNav}>
+              <span className="panjara">#</span>
+              <span className="nav-title">contacts</span>
+            </NavLink>
           </li>
         </div>
       </div>
       <header data-aos="fade-down" data-aos-duration="3000">
         <nav>
           <ul className="nav-items">
-            <div className="logo">
-              <img src={logo} alt="logo img" />
-              <p className="logoname">uzbedev</p>
+            <div className="items">
+              <div className="logo">
+                <img src={logo} alt="logo img" />
+                <p className="logoname">uzbedev</p>
+              </div>
+              <div className="links">
+                <li className="link-item">
+                  <NavLink activeClassName="active" to="/" onClick={closeNav}>
+                    <span className="panjara">#</span>
+                    <span className="nav-title">home</span>
+                  </NavLink>
+                </li>
+                <li className="link-item">
+                  <NavLink
+                    activeClassName="active"
+                    to="/projects"
+                    onClick={closeNav}
+                  >
+                    <span className="panjara">#</span>
+                    <span className="nav-title">projects</span>
+                  </NavLink>
+                </li>
+                <li className="link-item">
+                  <NavLink
+                    activeClassName="active"
+                    to="/about-me"
+                    onClick={closeNav}
+                  >
+                    <span className="panjara">#</span>
+                    <span className="nav-title">about-me</span>
+                  </NavLink>
+                </li>
+                <li className="link-item">
+                  <NavLink
+                    activeClassName="active"
+                    to="/contacts"
+                    onClick={closeNav}
+                  >
+                    <span className="panjara">#</span>
+                    <span className="nav-title">contacts</span>
+                  </NavLink>
+                </li>
+              </div>
             </div>
-            <div className="links">
-              <li className="link-item">
-                <a href="/">
-                  <span className="panjara">#</span>
-                  <span style={{ color: "#fff" }}>home</span>
-                </a>
-              </li>
-              <li className="link-item">
-                <a href="/projects">
-                  <span className="panjara">#</span>projects
-                </a>
-              </li>
-              <li className="link-item">
-                <a href="/about-me">
-                  <span className="panjara">#</span>about-me
-                </a>
-              </li>
-              <li className="link-item">
-                <a href="/contacts">
-                  <span className="panjara">#</span>contacts
-                </a>
-              </li>
-            </div>
-              <img src={toggle} alt="toggle img" onClick={openNav}  className="toggle"/>
+            <img
+              src={toggle}
+              alt="toggle img"
+              onClick={openNav}
+              className="toggle"
+            />
           </ul>
         </nav>
       </header>

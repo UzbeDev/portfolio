@@ -21,13 +21,13 @@ function Footer() {
             <Link to="mailto:uzbedev@gmail.com?subject=Assalamu%20Alaykum">
               <img src={email} alt="email icon" />
             </Link>
-            <Link>
+            <Link to="https://github.com/uzbedev">
               <img src={github} alt="github icon" />
             </Link>
           </div>
         </div>
       </div>
-      <p className="copyright">© Copyright 2024. Made by Uzbedev</p>
+      <p className="copyright">© Copyright 2025. Made by uzbedev</p>
     </footer>
   );
 }

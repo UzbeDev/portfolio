@@ -1,32 +1,48 @@
 .about-me-section {
   position: relative;
+
   .title {
     margin-top: 53px;
     margin-bottom: 14px;
   }
+
   .first {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
+    margin-left: 200px;
     .mid-dot {
       position: absolute;
       top: 25%;
       left: -15%;
     }
+
     .text {
       .desc {
         width: 515px;
+
         .part-2 {
           margin-top: 40px;
           margin-bottom: 40px;
         }
       }
     }
+
     .pattern {
       position: relative;
       margin-top: -100px;
       margin-right: 15%;
+
+      .person2 {
+        position: absolute;
+        width: 500px;
+        // height: 200px;
+        right: -100%;
+        top: -25%;
+        opacity: 0.7;
+      }
+
       .img-1 {
         width: 84px;
         height: 84px;
@@ -34,6 +50,7 @@
         top: 0;
         right: 300%;
       }
+
       .img-2 {
         width: 104px;
         height: 56px;
@@ -41,12 +58,14 @@
         top: 48%;
         right: 125%;
       }
+
       .img-3 {
         width: 103px;
         height: 103px;
         margin-top: 225%;
         margin-left: 125%;
       }
+
       .pinkPat {
         position: absolute;
         width: 155px;
@@ -57,6 +76,7 @@
       }
     }
   }
+
   // .dotPatImage {
   //   position: absolute;
   //   bottom: 20%;
@@ -69,6 +89,7 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+
     .box {
       // gap: 8px;
       width: 200px; //178px
@@ -108,44 +129,213 @@
         margin-top: 20px;
         margin-bottom: 8px;
       }
+
       .l {
         color: #fff;
       }
     }
   }
+
   .funfact {
     display: flex;
-    // justify-content: space-between;
+    // justify-content: center;
     align-items: center;
+
     .text {
       .boxes {
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 1em;
         column-gap: 20px;
+
         .box {
           display: block;
           width: fit-content;
+
           .desc {
             margin: 0;
           }
         }
       }
     }
+
     .pattern {
       position: relative;
-      margin-left: 250px;
+      margin-left: 400px;
+
       .SkillDotPat {
         position: absolute;
         right: 20%;
         bottom: 10%;
       }
+
       .SkillpinkPat {
         position: absolute;
         width: 133px;
         height: 133px;
 
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  //about-me
+  .about-me-section {
+    margin-top: 80px;
+
+    .title {
+      display: unset;
+      // flex-direction: column;
+
+      .line {
+        width: 50%;
+      }
+    }
+
+    .first {
+      align-items: center;
+      margin-left: 0;
+      .text {
+        margin-top: 100px;
+
+        position: relative;
+
+        .half-square {
+          display: none;
+        }
+
+        .desc {
+          width: 315px;
+
+          .part-2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+
+      .pattern {
+        margin-top: 30px;
+        margin-left: 240px;
+
+        .pinkPat {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          right: -100%;
+          top: -10%;
+        }
+
+        .img-1 {
+          width: 53px;
+          height: 53px;
+          // margin-left: 10px;
+          top: 10%;
+          left: -380%;
+        }
+
+        .img-2 {
+          width: 76px;
+          height: 76px;
+          right: 250%;
+          top: 70%;
+        }
+
+        .img-3 {
+          position: relative;
+          width: 53px;
+          height: 53px;
+          // right: 100%;
+          // bottom: -50%;
+        }
+
+        .mid-dot {
+
+          top: 70%;
+        }
+
+        .person2 {
+          width: 300px;
+          right: -50%;
+          top: -10%;
+        }
+      }
+    }
+  }
+
+  .skills {
+    .title {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .box {
+        margin-bottom: 20px;
+      }
+
+      //   .desc {
+      //     margin: 0;
+      //   }
+      // }
+    }
+
+    // .pattern {
+    //   margin-left: 0;
+    //   margin-top: 30px;
+
+    //   .SkillDotPat {
+    //     position: absolute;
+    //     right: -10%;
+    //     bottom: -10%;
+    //   }
+
+    //   .SkillpinkPat {
+    //     position: absolute;
+    //     width: 100px;
+    //     height: 100px;
+    //     right: -50%;
+    //     top: -10%;
+    //   }
+    // }
+  }
+
+  .funfact {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    .text {
+      .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .pattern {
+      margin-left: 0;
+      display: none;
+      // .SkillDotPat {
+      //   position: absolute;
+      //   right: -10%;
+      //   bottom: -10%;
+      // }
+
+      // .SkillpinkPat {
+      //   position: absolute;
+      //   width: 100px;
+      //   height: 100px;
+      //   right: -50%;
+      //   top: -10%;
+      // }
     }
   }
 }

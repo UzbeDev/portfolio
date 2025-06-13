@@ -11,10 +11,14 @@
 
 .cards {
   display: flex;
+  grid-template-columns: none !important;
   justify-content: space-between;
   align-items: center;
   margin-top: 48px;
   margin-bottom: 81px;
+}
+.cards .custom-card {
+  margin-left: 20px;
 }
 .cards .card-footer {
   display: flex;
@@ -67,4 +71,30 @@
   position: absolute;
   top: 90%;
   left: -15%;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .custom-card {
+    margin-top: 20px;
+  }
+  .title {
+    margin-top: 50px;
+  }
+  .square,
+  .square2 {
+    display: none;
+  }
+  .dotpattern,
+  .dotpattern2,
+  .dotpattern3 {
+    display: none;
+  }
 }/*# sourceMappingURL=project.css.map */

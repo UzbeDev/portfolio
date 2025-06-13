@@ -4,10 +4,14 @@ import "./contact.css";
 import email from "../../../img/icons/Email.svg";
 import telegram from "../../../img/icons/Telegram.svg";
 import { motion } from "framer-motion";
-import successIcon from "./../../../img/icons/checked-icon.png";
-// import errorIcon from "./../../../img/icons/error-icon.png";
 import contactIMG from "../../../img/contact.png";
+import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useMediaQuery } from "react-responsive";
 export default function Contact() {
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
+  const [captchaValue, setCaptchaValue] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,6 +25,13 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!captchaValue) {
+      setNotificationText("❌ Please complete the CAPTCHA!");
+      showNotification();
+      return;
+    }
+
     e.preventDefault();
 
     emailjs
@@ -64,19 +75,28 @@ export default function Contact() {
             You can message me here:
           </p>
         </p>
-
+      {(isDesktopOrLaptop || isBigScreen) && (
         <div className="box" data-aos="zoom-in-left" data-aos-duration="2000">
           <p className="desc">Message me here:</p>
           <div className="item">
             <img src={telegram} alt="telegram icon" />
-            <p className="desc d">@Network_Person</p>
+            <Link className="desc d" to="https://t.me/Network_Person">
+              {" "}
+              @Network_Person
+            </Link>
           </div>
           <div className="item">
             <img src={email} alt="email icon" />
-            <p className="desc d">uzbedev@gmail.com</p>
+            <Link
+              className="desc d"
+              to="mailto:uzbedev@gmail.com?subject=Assalamu%20Alaykum"
+            >
+              uzbedev@gmail.com
+            </Link>
           </div>
         </div>
-      </div>
+      )}
+    </div>
       <div className="contact-part">
         <form onSubmit={handleSubmit} className="contact-form">
           <label
@@ -135,7 +155,10 @@ export default function Contact() {
             data-aos="fade-left"
             data-aos-duration="3000"
           ></textarea>
-
+          <ReCAPTCHA
+            sitekey="6LcP1FwrAAAAABXO5-WTuEaYDvTVbeXHRSgt3074"
+            onChange={(value) => setCaptchaValue(value)}
+          />
           <button
             type="submit"
             className="btn-button"
@@ -145,13 +168,15 @@ export default function Contact() {
             Send Message
           </button>
         </form>
-        <img
-          src={contactIMG}
-          alt="contact illustration"
-          width="600px"
-          data-aos="fade-left"
-          data-aos-duration="3000"
-        />
+        {(isDesktopOrLaptop || isBigScreen) && (
+          <img
+            src={contactIMG}
+            alt="contact illustration"
+            width="500px"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+          />
+        )}
       </div>
 
       {/* Notification */}

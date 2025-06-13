@@ -7,35 +7,62 @@ const LoadingScreen = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    let loaded = false;
+
     const handleLoad = () => {
-      setFadeOut(true); // Start fade-out effect
-      setTimeout(() => setIsLoading(false), 800); // Remove after fade-out
+      loaded = true;
+      setFadeOut(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.overflow = "auto"; // ✅ enable scroll
+      }, 800);
     };
 
-    // Detect when page is fully loaded
     window.addEventListener("load", handleLoad);
 
-    return () => window.removeEventListener("load", handleLoad);
+    // Fallback if load event never fires (e.g., on mobile)
+    const timeout = setTimeout(() => {
+      if (!loaded) {
+        handleLoad();
+      }
+    }, 5000); // 5 seconds max wait
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(timeout);
+      document.body.style.overflow = "auto"; // fallback cleanup
+    };
   }, []);
 
   return (
     <>
       {isLoading && (
-        <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#282c33",
-          zIndex: 9999,
-          opacity: fadeOut ? 0 : 1, // Fading effect
-          transition: "opacity 0.8s ease-out", // Smooth fade-out
-        }}>
-          <Lottie animationData={loadingAnimation} loop={true} style={{ width: 150, height: 150 }} />
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#282c33",
+            zIndex: 9999,
+            opacity: fadeOut ? 0 : 1,
+            transition: "opacity 0.8s ease-out",
+            overflow: "hidden", // prevents scrollbars
+          }}
+        >
+          <Lottie
+            animationData={loadingAnimation}
+            loop={true}
+            style={{
+              width: "40vw",
+              maxWidth: 200,
+              height: "auto",
+            }}
+          />
         </div>
       )}
     </>

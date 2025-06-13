@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import iconForPerson from "./../../../img/logo.png";
 import dots from "./../../../img/Dots.svg";
 import project1 from "./../../../img/project1.jpg";
@@ -8,42 +7,47 @@ import square from "./../../../img/square.svg";
 import outlinepatsvg from "./../../../img/outlinepatsvg.svg";
 import "./app.css";
 import middleDots from "./../../../img/middledots.svg";
-import telegram from "./../../../img/icons/Telegram.svg";
-import email from "./../../../img/icons/Email.svg";
 import person from "./../../../img/person.png";
-import emailjs from "emailjs-com";
 import Contact from "../contact/Contact";
+import person2 from "./../../../img/person2.png";
+import { useMediaQuery } from "react-responsive";
 function App() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+  //media
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 1224px)",
   });
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  // const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+  // const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .send(
-        "service_obz3xsp",
-        "template_w1avvt9",
-        formData,
-        "PqvKiHfjCkjA6Ntjm"
-      )
-      .then(() => alert("Message sent successfully!"))
-      .catch((error) => console.error("Failed to send message:", error));
-  };
-
-
-  
   return (
     <>
       <section className="intro-section">
         <div className="intro">
+        {isTabletOrMobile?(<div className="personImg">
+            <img
+              className="icon"
+              src={iconForPerson}
+              alt="icon"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+            />
+            <img
+              data-aos="zoom-out-up"
+              data-aos-duration="1000"
+              className="person"
+              src={person}
+              alt="Person"
+            />
+            <img
+              className="dot"
+              src={dots}
+              alt="dots"
+              data-aos="fade-down-left"
+              data-aos-duration="2000"
+            />
+          </div>):null}
           <div className="welcome">
             <p className="title" data-aos="zoom-in" data-aos-duration="1000">
               uzbedev is <span>full-stack</span> developer
@@ -52,17 +56,21 @@ function App() {
               He crafts responsive websites where <br /> technologies meet
               creativity
             </p>
-            <a href="/contacts">
-              <button
-                type="button"
-                className="btn-button"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              >
-                Contact me!!
-              </button>
-            </a>
+            {(isDesktopOrLaptop || isBigScreen) && (
+              <a href="/contacts">
+                <button
+                  type="button"
+                  className="btn-button"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                >
+                  Contact me!!
+                </button>
+              </a>
+            )}
           </div>
+          {isTabletOrMobile && <div className="clearfix"></div>}
+          {isTabletOrMobile ? null : (
           <div className="personImg">
             <img
               className="icon"
@@ -85,7 +93,7 @@ function App() {
               data-aos="fade-down-left"
               data-aos-duration="2000"
             />
-          </div>
+          </div>)}
         </div>
         <div className="clearfix"></div>
         <div className="text-box">
@@ -130,13 +138,15 @@ function App() {
             View all {"~~>"}
           </a>
         </div>
-        <img
-          src={dots}
-          className="dotpattern"
-          alt="dots pattern"
-          data-aos="fade-right"
-          data-aos-duration="3000"
-        />
+        {(isDesktopOrLaptop || isBigScreen) && (
+          <img
+            src={dots}
+            className="dotpattern"
+            alt="dots pattern"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+          />
+        )}
         <div className="cards">
           <div
             data-aos="zoom-in-up"
@@ -149,7 +159,7 @@ function App() {
             </div>
             <div className="custom-card-body">
               <h1>Finsweet</h1>
-              <p>Importand project</p>
+              <p>Project for choosing great font pairs</p>
             </div>
             <div className="card-footer">
               <a
@@ -174,7 +184,7 @@ function App() {
             </div>
             <div className="custom-card-body">
               <h1>Pro Auto</h1>
-              <p>Importand project</p>
+              <p>Project for online auto shop</p>
             </div>
             <div className="card-footer">
               <a
@@ -199,7 +209,7 @@ function App() {
             </div>
             <div className="custom-card-body">
               <h1>Trip Goal</h1>
-              <p>Importand project</p>
+              <p>Project for trip company</p>
             </div>
             <div className="card-footer">
               <a
@@ -214,11 +224,13 @@ function App() {
             </div>
           </div>
         </div>
-        <div
-          className="square"
-          data-aos="fade-left"
-          data-aos-duration="3000"
-        ></div>
+        {(isDesktopOrLaptop || isBigScreen) && (
+          <div
+            className="square"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+          ></div>
+        )}
       </section>
 
       <section className="skill-section">
@@ -339,6 +351,13 @@ function App() {
             </div>
           </div>
           <div className="pattern">
+            <img
+              src={person2}
+              alt=""
+              className="person2"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            />
             <img
               src={dots}
               alt="Patternimg"

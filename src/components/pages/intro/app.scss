@@ -130,6 +130,8 @@ $font-family_1: Fira Code;
 
 }
 
+
+
 .project-section {
   margin-top: 200px;
 }
@@ -168,9 +170,6 @@ $font-family_1: Fira Code;
   margin-top: 10px;
 }
 
-.cards {
-  display: flex;
-}
 
 .custom-card {
   border: 1px solid var(--gray, #abb2bf);
@@ -191,6 +190,7 @@ $font-family_1: Fira Code;
     }
   }
 }
+
 
 .custom-card-header {
   margin: 0;
@@ -289,7 +289,10 @@ $font-family_1: Fira Code;
 
   .cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+    margin-bottom: 81px;
   }
 
   .dotpattern {
@@ -376,12 +379,12 @@ $font-family_1: Fira Code;
       align-items: center;
 
       .box {
-      width: 178px;
+        width: 178px;
         padding: 8px 8px;
         border: 1px solid var(--gray, #abb2bf);
 
         .title {
-           color: var(--white, #fff);
+          color: var(--white, #fff);
           font-family: Fira Code;
           font-size: 16px;
           font-style: normal;
@@ -389,9 +392,9 @@ $font-family_1: Fira Code;
           line-height: normal;
           display: flex;
         }
-        
+
         .line {
-          margin:8px -8px -8px -8px;
+          margin: 8px -8px -8px -8px;
           padding: 0;
           width: 177px;
           height: 0px;
@@ -403,7 +406,7 @@ $font-family_1: Fira Code;
         }
 
         .desc {
-            color: var(--gray, #abb2bf);
+          color: var(--gray, #abb2bf);
           font-family: Fira Code;
           font-size: 16px;
           font-style: normal;
@@ -456,6 +459,16 @@ $font-family_1: Fira Code;
     .pattern {
       position: relative;
       margin-right: 15%;
+
+      .person2 {
+        position: absolute;
+        width: 500px;
+        // height: 200px;
+        right: -100%;
+        top: -12.5%;
+        opacity: 0.7;
+      }
+
       .img-1 {
         width: 84px;
         height: 84px;
@@ -560,5 +573,325 @@ $font-family_1: Fira Code;
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+
+  //project
+  .project-section {
+    margin-top: 100px;
+
+    .first-line {
+      justify-content: center;
+      text-align: center;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .project-title {
+      .title-main {
+        display: unset;
+      }
+      .text {
+        font-size: 20px;
+      }
+      .view-all {
+        font-size: 14px;
+      }
+    }
+
+    .line {
+      width: 100%;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .custom-card {
+      width: 90vw;
+      max-width: 320px;
+      margin-top: 20px;
+
+      .custom-card-header {
+        p {
+          font-size: 14px;
+        }
+      }
+      .custom-card-body {
+        h1 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .card-footer {
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  //skill-section
+  .skill-section {
+    margin-top: 80px;
+
+    .skill-title {
+      display: unset;
+
+      .text {
+        font-size: 20px;
+      }
+      .line {
+        width: 50%;
+        margin: 20px 210px 20px 16px !important;
+      }
+    }
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+
+    .box {
+      .title {
+        margin-top: 0;
+        font-size: 14px;
+      }
+      .desc {
+        font-size: 13px;
+      }
+    }
+
+    .patterns {
+      max-width: 300px;
+
+      .img1 {
+        width: 53px;
+        height: 53px;
+        margin-left: 20px;
+      }
+
+      .img2 {
+        width: 76px;
+        height: 76px;
+        right: -50%;
+      }
+
+      .img3 {
+        width: 53px;
+        height: 53px;
+        right: 30%;
+      }
+
+      .img44 {
+        width: 100px;
+        height: 100px;
+        left: 30px;
+      }
+
+      .img5 {
+        width: 42px;
+        height: 42px;
+        right: -50%;
+      }
+    }
+
+    .main-side {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .box {
+      margin-top: 30px;
+    }
+  }
+
+  //about-me
+  .about-me-section {
+    margin-top: 80px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      text-align: unset;
+
+      .line {
+        width: 50%;
+      }
+    }
+
+    .main {
+      flex-direction: column;
+      align-items: center;
+
+      .text {
+        position: relative;
+
+        .half-square {
+          display: none;
+        }
+
+        .desc {
+          width: 315px;
+          text-align: unset;
+          font-size: 14px;
+
+          .part-2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .pattern {
+        margin-left: 200px;
+
+        .img-1 {
+          width: 53px;
+          height: 53px;
+          top: 10%;
+          left: -380%;
+        }
+
+        .img-2 {
+          width: 76px;
+          height: 76px;
+          right: 250%;
+          top: 70%;
+        }
+
+        .img-3 {
+          position: relative;
+          width: 53px;
+          height: 53px;
+        }
+
+        .person2 {
+          width: 300px;
+          right: -50%;
+          top: -10%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+
+    >div {
+      width: 100%;
+      float: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      align-items: center;
+    }
+  }
+
+  .desc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .text-box {
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+
+    .main-box {
+      width: 90vw;
+      max-width: 350px;
+      padding: 16px;
+
+      p {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    .mini-box {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 90vw;
+      max-width: 350px;
+      padding: 10px;
+      text-align: center;
+      margin-top: 12px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .personImg {
+    justify-content: center;
+    width: 70vw;
+    max-width: 220px;
+    height: auto;
+    min-height: 120px;
+    margin: 0 auto 16px auto;
+
+    .person {
+      width: 200px;
+      border-top-left-radius: 50% 50%;
+      border-top-right-radius: 50% 50%;
+      border-bottom-right-radius: 50% 50%;
+      border-bottom-left-radius: 50% 50%;
+    }
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    margin-top: 16px;
+    position: static;
+    align-self: center;
+  }
+
+  .dot {
+    width: 54px;
+    height: 54px;
+    margin-left: 0;
+    margin-top: 24px;
+    align-self: center;
+  }
+
+  .welcome {
+    margin-left: 0;
+    align-items: center;
   }
 }

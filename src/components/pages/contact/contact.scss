@@ -20,6 +20,7 @@
     .box {
       padding: 16px;
       border: 1px solid var(--gray, #abb2bf);
+      margin-left: -200px;
 
       .desc {
         display: contents;
@@ -59,12 +60,12 @@
     margin-bottom: 15px;
 
     .btn-button {
-      margin-top: 50px;
 
       &:active {
         background: rgba(199, 120, 221, 0.2);
         transition: all 0.2s ease-in-out;
       }
+
 
     }
 
@@ -115,9 +116,67 @@ textarea {
 
 }
 
+textarea {
+  margin-bottom: 50px;
+
+}
+
 .contact-part {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+}
+
+@media (max-width: 768px) {
+  .first {
+    flex-direction: column;
+    // align-items: flex-start;
+    margin: 0;
+    .desc {
+      display: unset;
+      width: 400px !important;
+      font-size: 15px;
+
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .title {
+    text-align: unset;
+
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-part {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .contact-part .item {
+    margin-bottom: 10px;
+  }
+
+  .contact-part .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-part .item .d {
+    margin-left: 10px;
+  }
+
+  .contact-part .item .d a {
+    color: var(--purple, #c678dd);
+    text-decoration: none;
+  }
 
 }

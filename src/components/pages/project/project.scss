@@ -11,27 +11,39 @@
 
 .cards {
   display: flex;
+  grid-template-columns: none !important;
   justify-content: space-between;
   align-items: center;
   margin-top: 48px;
   margin-bottom: 81px;
-  .card-footer{
+
+  .custom-card{
+    // width: 100%;
+    // height: 100%;
+    margin-left: 20px;
+  }
+  .card-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center ;
-    a{
+    align-items: center;
+
+    a {
       text-decoration: none;
     }
   }
 }
+
 .projects-section {
   position: relative;
 }
+
 .dotpattern {
   position: absolute;
   top: 25%;
   left: -15%; //-13;
 }
+
+
 
 .square {
   position: absolute;
@@ -43,6 +55,7 @@
   right: -10%; //-8.6
   top: 12.5%;
 }
+
 .square2 {
   position: absolute;
   width: 50px;
@@ -53,13 +66,53 @@
   left: -10%; // -8.6
   top: 65%;
 }
+
 .dotpattern2 {
   position: absolute;
   top: 70%;
   right: -15%; //-13;
 }
+
 .dotpattern3 {
   position: absolute;
   top: 90%;
   left: -15%; //-13;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .custom-card {
+    // width: 400px;
+    margin-top: 20px;
+
+  }
+
+  // .card-footer {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   text-align: center;
+  // }
+  .title {
+    margin-top: 50px;
+  }
+
+  .square,
+  .square2 {
+    display: none; // Hide squares on smaller screens
+  }
+
+  .dotpattern,
+  .dotpattern2,
+  .dotpattern3 {
+    display: none; // Hide dot patterns on smaller screens
+  }
+
 }

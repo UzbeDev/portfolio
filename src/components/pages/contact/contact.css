@@ -16,6 +16,7 @@
 .contact-section .first .box {
   padding: 16px;
   border: 1px solid var(--gray, #abb2bf);
+  margin-left: -200px;
 }
 .contact-section .first .box .desc {
   display: contents;
@@ -43,9 +44,6 @@
   max-width: 600px;
   padding: 20px;
   margin-bottom: 15px;
-}
-.contact-section .contact-form .btn-button {
-  margin-top: 50px;
 }
 .contact-section .contact-form .btn-button:active {
   background: rgba(199, 120, 221, 0.2);
@@ -90,8 +88,53 @@ textarea:invalid {
   background-image: url("./../../../img/logo.png");
 }
 
+textarea {
+  margin-bottom: 50px;
+}
+
 .contact-part {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .first {
+    flex-direction: column;
+    margin: 0;
+  }
+  .first .desc {
+    display: unset;
+    width: 400px !important;
+    font-size: 15px;
+  }
+  .first .box {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    text-align: unset;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+  .contact-part {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .contact-part .item {
+    margin-bottom: 10px;
+  }
+  .contact-part .item:last-child {
+    margin-bottom: 0;
+  }
+  .contact-part .item .d {
+    margin-left: 10px;
+  }
+  .contact-part .item .d a {
+    color: var(--purple, #c678dd);
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=contact.css.map */
